@@ -62,5 +62,6 @@ export default {
   .contact-card h2 small{
     font-size: 0.5em;
     color: #25aae1;
+    display: block;
   }
 </style>

@@ -1,10 +1,13 @@
 <template>
-  <div>
-    <div>
+  <div class="col-md-12">
+    <div class="contact-card">
+      <img v-bind:src="contact.avatar" /> 
 
-        <img v-bind:src="contact.avatar" /> 
+      <h2>
+          {{ contact.first_name }} {{ contact.last_name }}
+          <small> {{ contact.email }}</small>
+      </h2>
 
-        {{ contact.first_name }} {{ contact.last_name }}
     </div>
   </div>
 </template>
@@ -36,3 +39,28 @@ export default {
   }
 }
 </script>
+<style type="text/css">
+  .contact-card{
+    margin:20px auto;
+    width: 280px;
+    overflow: hidden;
+    padding: 10px;
+    border-top: solid 10px #25aae1;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  .contact-card img{
+    border-radius: 100%;
+  }
+  .contact-card h2{
+    font-weight: bold;
+    font-size: 1.8em;
+    margin: 10px;
+  }
+  .contact-card h2 small{
+    font-size: 0.5em;
+    color: #25aae1;
+  }
+</style>

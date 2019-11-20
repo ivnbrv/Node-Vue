@@ -1,14 +1,6 @@
 <template>
   <div class="col-md-12">
-    <div class="contact-card">
-      <img v-bind:src="contact.avatar" /> 
-
-      <h2>
-          {{ contact.first_name }} {{ contact.last_name }}
-          <small> {{ contact.email }}</small>
-      </h2>
-
-    </div>
+    
   </div>
 </template>
 
@@ -17,7 +9,7 @@ export default {
   name: 'ContactDetail',
   data () {
     return {
-      id: 0,
+      id: 1,
       url: 'https://reqres.in/api/users/',
       contact: [],
       response: []
@@ -34,8 +26,7 @@ export default {
       })
   },
   created () {
-    this.id = this.$route.params.id
-    this.url = 'https://reqres.in/api/users/' + this.$route.params.id
+    this.url = 'https://reqres.in/api/users/' + this.id
   }
 }
 </script>

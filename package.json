@@ -16,6 +16,7 @@
     "bootstrap-vue": "^2.1.0",
     "vue": "^2.5.2",
     "vue-axios": "^2.1.5",
+    "vue-base64-file-upload": "^1.0.4",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {
